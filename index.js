@@ -1,14 +1,19 @@
-/**
-
-타입스크립트?
-1. 자바스크립트의 타입을 지정하여 사용하고 싶을 때 설치해서 사용
-2. 자바스크립트 문법 그대로 사용가능하며, 타입 문법을 업그레이드해서 사용 가능
-
-why?
-1. 자바스크립트는 타입에 관대하다.
-- Dynamic typeing 을 지원하기 때문
-- 예시) 5-'3'
-- 예시와 같이 숫자와 문자를 연산해도 타입을 바꿔 연산을 가능하게 한다.
-2. 위와 같은 경우 타입스크립트는 오류로 인식한다.
-
- */
+// ts 파일은 js로 변환해야 한다.
+// 자바스크립트 파일로 컴파일 한다.
+let userName = "NohSion";
+// error : userName = 123;
+let nameArray = ["NohSion", "Noh"];
+// error nameArray = [123, "Noh"];
+let nameObject = { name: "NohSion" };
+// error nameObject = {name: 123};
+// Union type
+let nameType = 123;
+// function type
+const func = (x) => {
+    return x * 2;
+};
+class User {
+    constructor(name) {
+        this.name = name;
+    }
+}
