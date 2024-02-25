@@ -14,6 +14,7 @@ function myFunction1(x) {
     }
     // Narrowing으로 판정해주는 문법
     // 현재 변수의 타입이 뭔지 특정지을 수 있기만 하면 된다.
+    // in, instanceof 키워드도 사용 가능
 }
 // Assertion 문법 (타입 덮어쓰기)
 function myFunctio2(x) {
@@ -26,5 +27,19 @@ function myFunctio2(x) {
      * 2. type을 변경할 때 사용하는 것이 아니다.
      * 3. 무슨 타입이 들어올지 100% 확실할 때 쓰는 방법
      * 4. 왜 타입 에러가 발생하는 지 모를때, 비상용, 디버깅 용으로 사용
+     * as는 그냥 주장만 한는 것, 실제로 타입을 바꿔주는 것이 아님
      */
 }
+function myFunctio3(arr) {
+    let array = [];
+    for (const a of arr) {
+        if (typeof a === 'string') {
+            array.push(parseInt(a));
+        }
+        else {
+            array.push(a);
+        }
+    }
+    return array;
+}
+console.log(myFunctio3([1, 2, '3', 4, '5']));
