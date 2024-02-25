@@ -13,6 +13,7 @@ const func = (x) => {
     return x * 2;
 };
 class User {
+    name;
     constructor(name) {
         this.name = name;
     }
