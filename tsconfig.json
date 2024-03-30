@@ -1,10 +1,13 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    // es5 --> es6
+    "target": "es6",
     "lib": [
       "dom",
       "dom.iterable",
-      "esnext"
+      "esnext",
+      // Add es6 
+      "es6"
     ],
     "allowJs": true,
     "skipLibCheck": true,
@@ -13,6 +16,7 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
+    // commonjs(nodejs), esnext(react)
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
